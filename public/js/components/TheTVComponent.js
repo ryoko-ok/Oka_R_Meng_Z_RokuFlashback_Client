@@ -1,5 +1,5 @@
 export default {
-    name: "TVComponent",
+    name: "TheTVComponent",
 
     template: `
         <section>
