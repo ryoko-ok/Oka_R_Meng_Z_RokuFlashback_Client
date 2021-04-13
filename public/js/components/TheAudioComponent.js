@@ -1,5 +1,5 @@
 export default {
-    name: "AudioComponent",
+    name: "TheAudioComponent",
 
     template: `
         <section>

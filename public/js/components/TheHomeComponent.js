@@ -1,3 +1,7 @@
+import TheVideoComponent from "./TheVideoComponent.js";
+import TheAudioComponent from "./TheAudioComponent.js";
+
+
 export default {
     name: "TheHomeComponent",
 
@@ -5,6 +9,7 @@ export default {
 
     template: `
     <div class="container">
+        <component :is="this.activeComponent"></component>
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
@@ -41,9 +46,6 @@ export default {
                         <a href="comedy">Comedy</a>
                     </li>
                     <li>
-                        <a href="family">Family</a>
-                    </li>
-                    <li>
                         <a href="fantasyr">Fantasy</a>
                     </li>
                     <li>
@@ -65,16 +67,16 @@ export default {
     </div>
     `,
 
-    data() {
+    data: function() {
         return {
             // push first (or random) media object here (selected / filtered on create)
             currentMediaDetails: {},
 
             // could add more media types here in future
             mediaTypes: [
-                { iconClass: "fas fa-headphones", description: "audio" },
-                { iconClass: "fas fa-film", description: "video" },
-                { iconClass: "fas fa-tv", description: "television" }
+                { iconClass: "fas fa-headphones", description: "audio", component: TheAudioComponent },
+                { iconClass: "fas fa-film", description: "movie", component: TheVideoComponent },
+                { iconClass: "fas fa-tv", description: "television", component: TheVideoComponent }
             ],
 
             retrievedMedia: [],
@@ -102,8 +104,11 @@ export default {
         .catch((err) => console.error(err));
         },
 
-        switchCurrentMedia(media) {
-            this.currentMediaDetails = media;
+        // switchCurrentMedia(media) {
+        //     this.currentMediaDetails = media;
+        // }
+        switchMedia(theComponent) {
+            this.activeComponent = theComponent;
         }
     }
 }
