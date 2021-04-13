@@ -47,6 +47,12 @@ export default {
                         <a href="fantasyr">Fantasy</a>
                     </li>
                     <li>
+                    <a href="fantasyr">Romance</a>
+                    </li>
+                    <li>
+                    <a href="fantasyr">Horror</a>
+                    </li>
+                    <li>
                         <a href="all">All</a>
                     </li>
                 </ul>
