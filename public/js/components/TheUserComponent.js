@@ -15,9 +15,9 @@ export default {
 
     created: function() {
         // check if there's an avatar. if not, set it to a temporary one
-        // this.liveuser.user_avatar = (this.liveuser.user_avatar) ? this.liveuser.user_avatar : "temp_avatar.jpg";
+        // this.liveuser.user_avatar = (this.liveuser.user_avatar) ? this.liveuser.user_avatar : "avatar0.jpg";
         if (this.liveuser.user_avatar == null) {
-            this.liveuser.user_avatar = "temp_avatar.jpg";
+            this.liveuser.user_avatar = "avatar0.jpg";
         }
     },
 
