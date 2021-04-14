@@ -19,7 +19,7 @@ export default {
         <div class="row">
             <div class="col-12 col-sm-9">
                 <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideos" :src="'images/video/' + item.movies_covor" alt="media thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left media-thumb">
+                    <img v-for="item in allRetrievedVideos" :src="'images/video/' + item.movies_cover" alt="media thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left media-thumb">
                 </div>
             </div>
         </div>
