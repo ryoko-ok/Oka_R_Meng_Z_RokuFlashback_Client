@@ -15,5 +15,13 @@
     "http-proxy-middleware": "^1.0.6"
   },
   "devDependencies": {},
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryoko-ok/Oka_R_Meng_Z_RokuFlashback_Client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryoko-ok/Oka_R_Meng_Z_RokuFlashback_Client/issues"
+  },
+  "homepage": "https://github.com/ryoko-ok/Oka_R_Meng_Z_RokuFlashback_Client#readme"
 }

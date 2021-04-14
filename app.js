@@ -20,12 +20,3 @@ app.listen(port, ()=> {
     console.log(`app is running on ${port}`);
 })
 
-// create new user
-// imports at the top
-import router from "./components/Router.js";
-
-(() => {
-    const myVM = new Vue({
-        router
-    }).$mount("#app");
-})()

@@ -1,6 +1,8 @@
 import LoginComponent from './components/TheLoginComponent.js';
 import AllUsers from './components/TheAllUsersComponent.js';
 import HomeComponent from './components/TheHomeComponent.js';
+import AudioComponent from "./components/TheAudioComponent.js";
+import VideoComponent from "./components/TheVideoComponent.js";
 
 
 const router = new VueRouter({
@@ -24,7 +26,9 @@ const router = new VueRouter({
         data: {
             authenticated: false,
             isAdmin: false,
-            currentUser: undefined
+            currentUser: undefined,
+            activeComponent: VideoComponent
+
         },
 
         created: function() {
@@ -52,7 +56,12 @@ const router = new VueRouter({
             authenticateuser(uesr) {
                 // debugger;
                 this.currentUser = user;
+            },
+
+            switchComponents() {
+                this.activeComponent = (this.activeComponent.name === "VideoComponent")? AudioComponent : VideoComponent;
             }
+
         },
 
         router
