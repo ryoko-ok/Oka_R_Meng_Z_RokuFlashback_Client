@@ -16,6 +16,8 @@ export default {
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
                 <span class="media-year">Released in {{currentMediaDetails.movies_year}}</span>
+                <span class="media-genre">Genre {{currentMediaDetails.movies_genre}}</span>
+
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
@@ -46,13 +48,13 @@ export default {
                         <a href="comedy">Comedy</a>
                     </li>
                     <li>
-                        <a href="fantasyr">Fantasy</a>
+                        <a href="fantasy">Fantasy</a>
                     </li>
                     <li>
-                    <a href="fantasyr">Romance</a>
+                    <a href="romance">Romance</a>
                     </li>
                     <li>
-                    <a href="fantasyr">Horror</a>
+                    <a href="horror">Horror</a>
                     </li>
                     <li>
                         <a href="all">All</a>
@@ -60,7 +62,7 @@ export default {
                 </ul>
 
                 <div class="thumb-wrapper clearfix">
-                    <img v-for="media in retrievedMedia" :src="'images/video/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
+                    <img v-for="media in retrievedMedia" :src="'images/video/' + media.movies_covor" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
             </div>       
         </div> <!-- end 2-up for media info -->

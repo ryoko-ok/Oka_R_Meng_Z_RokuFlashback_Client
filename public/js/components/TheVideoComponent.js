@@ -12,14 +12,14 @@ export default {
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
+                <video autoplay controls muted :src="'images/video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-sm-9">
                 <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" alt="media thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left media-thumb">
+                    <img v-for="item in allRetrievedVideos" :src="'images/video/' + item.movies_covor" alt="media thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left media-thumb">
                 </div>
             </div>
         </div>
