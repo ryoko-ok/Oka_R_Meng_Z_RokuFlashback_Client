@@ -1,3 +1,6 @@
+import TheVideoComponent from "./TheVideoComponent.js";
+import TheAudioComponent from "./TheAudioComponent.js";
+
 export default {
     name: "TheHomeComponent",
 
@@ -5,12 +8,15 @@ export default {
 
     template: `
     <div class="container">
+    <component :is="this.activeComponent"></component>
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
                 <span class="media-year">Released in {{currentMediaDetails.movies_year}}</span>
+                <span class="media-genre">Genre : {{currentMediaDetails.movies_genre}}</span>
+
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
@@ -67,9 +73,9 @@ export default {
 
             // could add more media types here in future
             mediaTypes: [
-                { iconClass: "fas fa-headphones", description: "audio" },
-                { iconClass: "fas fa-film", description: "video" },
-                { iconClass: "fas fa-tv", description: "television" }
+                { iconClass: "fas fa-headphones", description: "audio", component: TheAudioComponent },
+                { iconClass: "fas fa-film", description: "movie", component: TheVideoComponent },
+                { iconClass: "fas fa-tv", description: "television", component: TheVideoComponent }
             ],
 
             retrievedMedia: [],
@@ -80,9 +86,9 @@ export default {
     created: function() {
 
         this.loadMedia(null,'movies');
+        this.$emit('setuser', this.currentuser);
     },
 
-    
     methods: {
         loadMedia(filter,mediaType) {
         // fetch data here
@@ -103,5 +109,6 @@ export default {
         switchCurrentMedia(media){
             this.currentMediaDetails = media;
         }
+
     }
 }
