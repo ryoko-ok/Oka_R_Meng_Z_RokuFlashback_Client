@@ -53,7 +53,7 @@ const router = new VueRouter({
                 // this.currentUser = undefined;
             },
 
-            authenticateuser(uesr) {
+            authenticateuser(user) {
                 // debugger;
                 this.currentUser = user;
             },
