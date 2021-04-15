@@ -7,19 +7,18 @@ export default {
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
                 <h4 class="media-title">{{currentMediaDetails.tvs_title}}</h4>
                 <p class="media-details" v-html="currentMediaDetails.tvs_storyline"></p>
-                <span class="media-time">{{currentMediaDetails.tvs_runtime}}</span>
                 <span class="media-year">{{currentMediaDetails.tvs_year}}</span>
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'images/video/' + currentMediaDetails.tvs_trailer" class="fs-video"></video>
+                <video autoplay controls muted :src="'images/tv/' + currentMediaDetails.tvs_trailer" class="fs-video"></video>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-sm-9">
                 <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideos" :src="'images/video/' + item.tvs_cover" alt="media thumb" @click="loadNewTv(item)" class="img-thumbnail rounded float-left media-thumb">
+                    <img v-for="item in allRetrievedVideos" :src="'images/tv/' + item.tvs_cover" alt="media thumb" @click="loadNewTv(item)" class="img-thumbnail rounded float-left media-thumb">
                 </div>
             </div>
         </div>
