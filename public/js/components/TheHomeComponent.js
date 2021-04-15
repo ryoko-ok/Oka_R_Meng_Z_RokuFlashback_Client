@@ -1,7 +1,3 @@
-import TheVideoComponent from "./TheVideoComponent.js";
-import TheAudioComponent from "./TheAudioComponent.js";
-
-
 export default {
     name: "TheHomeComponent",
 
@@ -9,15 +5,12 @@ export default {
 
     template: `
     <div class="container">
-        <component :is="this.activeComponent"></component>
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
                 <span class="media-year">Released in {{currentMediaDetails.movies_year}}</span>
-                <span class="media-genre">Genre {{currentMediaDetails.movies_genre}}</span>
-
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
@@ -48,13 +41,10 @@ export default {
                         <a href="comedy">Comedy</a>
                     </li>
                     <li>
-                        <a href="fantasy">Fantasy</a>
+                        <a href="family">Family</a>
                     </li>
                     <li>
-                    <a href="romance">Romance</a>
-                    </li>
-                    <li>
-                    <a href="horror">Horror</a>
+                        <a href="fantasyr">Fantasy</a>
                     </li>
                     <li>
                         <a href="all">All</a>
@@ -69,48 +59,49 @@ export default {
     </div>
     `,
 
-    data: function() {
+
+    data() {
         return {
             // push first (or random) media object here (selected / filtered on create)
             currentMediaDetails: {},
 
             // could add more media types here in future
             mediaTypes: [
-                { iconClass: "fas fa-headphones", description: "audio", component: TheAudioComponent },
-                { iconClass: "fas fa-film", description: "movie", component: TheVideoComponent },
-                { iconClass: "fas fa-tv", description: "television", component: TheVideoComponent }
+                { iconClass: "fas fa-headphones", description: "audio" },
+                { iconClass: "fas fa-film", description: "video" },
+                { iconClass: "fas fa-tv", description: "television" }
             ],
 
             retrievedMedia: [],
         }
     },
 
+
     created: function() {
-        this.loadMedia(null, 'movies');
-        this.$emit('setuser', this.currentuser);
+
+        this.loadMedia(null,'movies');
     },
 
+    
     methods: {
-        loadMedia(filter, mediaType) {
+        loadMedia(filter,mediaType) {
         // fetch data here
-        let url = (filter == null) ? `/api/${mediaType}` : `/api/${mediaType}/${filter}`;
+            let url = (filter == null) ? `/api/${mediaType}` : `/api/${mediaType}/${filter}`;
 
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                this.retrievedMedia = data;
+            fetch(url)
+               .then(res => res.json())
+               .then(data => {
+                   this.retrievedMedia =data;
 
-                // pick a random media object from the array
-                this.currentMediaDetails = data[Math.floor(Math.random() * data.length)];
-            })
-        .catch((err) => console.error(err));
+                   //pcik a random media object from the array
+                   this.currentMediaDetails = data[Math.floor(Math.random() * data.length)];
+
+               })
+               .catch((err) =>console.error(err));
         },
 
-        // switchCurrentMedia(media) {
-        //     this.currentMediaDetails = media;
-        // }
-        switchMedia(theComponent) {
-            this.activeComponent = theComponent;
+        switchCurrentMedia(media){
+            this.currentMediaDetails = media;
         }
     }
 }

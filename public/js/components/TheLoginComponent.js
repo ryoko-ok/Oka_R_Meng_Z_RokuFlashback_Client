@@ -5,7 +5,7 @@ export default {
         <div class="container">
             <div class="jumbotron roku-jumbotron">
                 <h1 class="display-4">Welcome to Flashback!</h1>
-                <p class="lead">Before revisiting your favourite movies, tv shows or music from yesteryear, please log in with a valid username and password.</p>
+                <p class="lead">Before revisiting your favourite movies, tv shows or music from past year, please log in with a valid username and password.</p>
                 <hr class="my-4">
                 <form>
                     <div class="form-row align-items-center">
@@ -40,34 +40,36 @@ export default {
  
      methods: {
          login() {
-            // let's check for valid input
-            if (this.input.username !="" && this.input.password !="") {
-                //do our login
-                let loginData = JSON.stringify({username: this.input.username, password: this.input.passowrd});
-            
-                let url = `/ums/admin/login`;
+           //lets check for valid input
+           if(this.input.username !="" && this.input.password != ""){
+               //true: login
+               //user put username and password
+               let loginData =  JSON.stringify({username: this.input.username, password: this.input.password});
 
-                fetch(url, {
-                    method: 'POST',
-                    body: loginData,
-                    headers: {
-                        'Accept': 'application/json, text/plain, */*',
-                        'Content-type': 'application/json'
-                    }
-                })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.message) {
-                        console.warn("user doesn't exist, or something else broke"); // add UI
-                    }else {
-                        data.user_name = this.input.username;
-                        this.$router.replace({ name: "users"});
-                    }
-                })
-                .catch((err) => console.error(err));
-            } else {
-                console.log("A username and password needs to be input");
-            }
+               let url = `/ums/admin/login`;
+
+               fetch(url, {
+                   method: 'POST',
+                   body: loginData,
+                   headers: {
+                       'Accept' : 'application/json, text/plain, */*',
+                       'Content-type': 'application/json'
+                   }
+               })
+               .then(res =>res.json())
+               .then(data =>{
+                   if (data.message){
+                       console.warn("user doesnt exist, or something else broke");
+                   }else{
+                       data.user_name = this.input.username;
+                       this.$router.replace({name:"users"});
+                   }
+               })
+               .catch((err) => console.error(err));
+
+           }else{
+               console.log("A username and password needs to be input");
+           }
          }            
     }
  }
