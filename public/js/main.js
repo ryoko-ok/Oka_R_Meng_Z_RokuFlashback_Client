@@ -38,8 +38,8 @@ const router = new VueRouter({
         methods: {
             logout() {
                 // push user back to login page
-                this.$router.push({ name: "login" });
-                this.authenticated = false;
+                // this.$router.push({ name: "login" });
+                // this.authenticated = false;
 
                 //remove the cached user from localstorage, if it exists
                 if (localStorage.getItem('cacheduser')) {
@@ -49,8 +49,8 @@ const router = new VueRouter({
                     localStorage.removeItem("cachedVideo");
                 }
 
-                // this.$router.push({ name: "root" });
-                // this.currentUser = undefined;
+                this.$router.push({ name: "root" });
+                this.currentUser = undefined;
             },
 
             authenticateuser(user) {

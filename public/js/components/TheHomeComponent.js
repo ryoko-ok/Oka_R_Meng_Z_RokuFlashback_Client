@@ -65,7 +65,6 @@ export default {
     </div>
     `,
 
-
     data() {
         return {
             // push first (or random) media object here (selected / filtered on create)
@@ -81,7 +80,6 @@ export default {
             retrievedMedia: [],
         }
     },
-
 
     created: function() {
 
