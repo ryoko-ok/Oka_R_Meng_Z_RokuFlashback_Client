@@ -1,8 +1,5 @@
-import TheVideoComponent from "./TheVideoComponent.js";
-import TheAudioComponent from "./TheAudioComponent.js";
-
 export default {
-    name: "TheHomeComponent",
+    name: "TVshowComponent",
 
     props: ['currentuser'],
 
@@ -11,16 +8,16 @@ export default {
     <component :is="this.activeComponent"></component>
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
-                <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
-                <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
-                <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
-                <span class="media-year">Released in {{currentMediaDetails.movies_year}}</span>
-                <span class="media-genre">Genre : {{currentMediaDetails.movies_genre}}</span>
+                <h4 class="media-title">{{currentMediaDetails.tvs_title}}</h4>
+                <p class="media-details" v-html="currentMediaDetails.tvs_storyline"></p>
+                <span class="media-time">{{currentMediaDetails.tvs_runtime}}</span>
+                <span class="media-year">Released in {{currentMediaDetails.tvs_year}}</span>
+                <span class="media-genre">Genre : {{currentMediaDetails.tvs_genre}}</span>
 
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
+                <video autoplay controls muted :src="'video/' + currentMediaDetails.tvs_trailer" class="fs-video"></video>
             </div>
         </div>
 
@@ -39,26 +36,10 @@ export default {
 
             <div class="col-12 col-sm-9 media-info">
                 <!-- genres for video -->
-                <ul class="media-genres">
-                    <li>
-                        <a href="action">Action</a>
-                    </li>
-                    <li>
-                        <a href="comedy">Comedy</a>
-                    </li>
-                    <li>
-                        <a href="family">Family</a>
-                    </li>
-                    <li>
-                        <a href="fantasyr">Fantasy</a>
-                    </li>
-                    <li>
-                        <a href="all">All</a>
-                    </li>
-                </ul>
+          
 
                 <div class="thumb-wrapper clearfix">
-                    <img v-for="media in retrievedMedia" :src="'images/video/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
+                    <img v-for="media in retrievedMedia" :src="'images/tv/' + media.tvs_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
             </div>       
         </div> <!-- end 2-up for media info -->
@@ -72,9 +53,9 @@ export default {
 
             // could add more media types here in future
             mediaTypes: [
-                { iconClass: "fas fa-headphones", description: "audio", component: TheAudioComponent },
-                { iconClass: "fas fa-film", description: "movie", component: TheVideoComponent },
-                { iconClass: "fas fa-tv", description: "television", component: TheVideoComponent }
+                { iconClass: "fas fa-headphones", description: "audio" },
+                { iconClass: "fas fa-film", description: "movie"},
+                { iconClass: "fas fa-tv", description: "television"}
             ],
 
             retrievedMedia: [],
@@ -83,7 +64,7 @@ export default {
 
     created: function() {
 
-        this.loadMedia(null,'movies');
+        this.loadMedia(null,'tvs');
         this.$emit('setuser', this.currentuser);
     },
 

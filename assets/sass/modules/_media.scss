@@ -1,0 +1,13 @@
+.all_media{
+    width: 80%;
+    margin: 13% auto;
+    display: flex;
+    flex-direction: row;
+    background-color: rebeccapurple;
+    .fa-tv, .fa-film, .fa-music{
+        color:white;
+        font-size: 150px;
+        cursor: pointer;
+        padding: 20%;
+    }
+}
