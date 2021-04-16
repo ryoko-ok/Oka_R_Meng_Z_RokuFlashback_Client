@@ -1,8 +1,11 @@
 import LoginComponent from './components/TheLoginComponent.js';
 import AllUsers from './components/TheAllUsersComponent.js';
-import HomeComponent from './components/TheHomeComponent.js';
-import AudioComponent from "./components/TheAudioComponent.js";
-import VideoComponent from "./components/TheVideoComponent.js";
+
+import ChooseMediaType from './components/TheMediaTypeComponent.js';
+import MovieComponent from './components/TheMovieComponent.js';
+import MusicComponent from "./components/TheMusicComponent.js";
+import TVshowComponent from "./components/TheTVshowComponent.js";
+
 
 
 const router = new VueRouter({
@@ -17,7 +20,11 @@ const router = new VueRouter({
             }
         }},
         { path: '/users', name: 'users', component: AllUsers },
-        { path: '/home', name: 'home', component: HomeComponent,props: true }
+        { path: '/media', name: 'media', component: ChooseMediaType, props: true },
+        { path: '/movies', name: 'movies', component: MovieComponent,props: true },
+        { path: '/musics', name: 'musics', component: MusicComponent,props: true },
+        { path: '/tvshows', name: 'tvshows', component: TVshowComponent,props: true }
+
     ]
 });
 
@@ -27,7 +34,7 @@ const router = new VueRouter({
             authenticated: false,
             isAdmin: false,
             currentUser: undefined,
-            activeComponent: VideoComponent
+
 
         },
 
@@ -58,9 +65,9 @@ const router = new VueRouter({
                 this.currentUser = user;
             },
 
-            switchComponents() {
-                this.activeComponent = (this.activeComponent.name === "VideoComponent")? AudioComponent : VideoComponent;
-            }
+           
+
+            
 
         },
 
