@@ -1,13 +1,28 @@
 .all_media{
-    width: 80%;
-    margin: 13% auto;
+    text-align: center;
+    width: 40%;
+    margin: 15% auto;
+
+.media-button{  
     display: flex;
     flex-direction: row;
-    background-color: rebeccapurple;
+    width: 100%;
+    margin: 0 auto;
+}
+    
     .fa-tv, .fa-film, .fa-music{
         color:white;
-        font-size: 150px;
+        font-size: 180px;
         cursor: pointer;
         padding: 20%;
+    }
+    .fa-tv:hover{
+        color: purple;
+    }
+     .fa-film:hover{
+        color: royalblue;
+    }
+     .fa-music:hover{
+        color: green;
     }
 }
