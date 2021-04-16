@@ -6,11 +6,14 @@ Roku Flashback Application _ Client
 
 Using database via server file and show media details on the page
 
-## Usage
+## Documents
+[Design](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
+[Develop](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
 
+## Usage
 1. Use own user account and enter
 2. Choose who is going to use the page
-3. Choose medias from movies, tvs, and musics
+3. Choose media type
 4. Click the pictures which you want to watch/listen
 
 ## Contributing

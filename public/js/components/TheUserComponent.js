@@ -5,7 +5,7 @@ export default {
 
     template: `
     <section class="col-xs-12 col-sm-6 col-md-4 mx-auto">
-        <div class="card rounded" @click="navToHome()">
+        <div class="card rounded" @click="navToMedia()">
             <div class="card-body text-center">
                 <img :src="'images/' + liveuser.user_avatar" class="rounded-circle img-fluid">
                 <p>{{ liveuser.user_name }}</p>
@@ -22,7 +22,7 @@ export default {
     },
 
     methods: {
-        navToHome() {
+        navToMedia() {
             // navigate to the home
             this.$router.push({ name: "media", params: { currentuser: this.liveuser }})
             // this should save the user to localstorage so that if they exist, they don't need to log in again

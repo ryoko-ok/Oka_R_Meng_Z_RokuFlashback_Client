@@ -8,6 +8,7 @@ import TVshowComponent from "./components/TheTVshowComponent.js";
 
 
 
+
 const router = new VueRouter({
     routes: [
         { path: '/', name: 'root', component: LoginComponent, beforeEnter: (to, from, next) => {
@@ -23,7 +24,8 @@ const router = new VueRouter({
         { path: '/media', name: 'media', component: ChooseMediaType, props: true },
         { path: '/movies', name: 'movies', component: MovieComponent,props: true },
         { path: '/musics', name: 'musics', component: MusicComponent,props: true },
-        { path: '/tvshows', name: 'tvshows', component: TVshowComponent,props: true }
+        { path: '/tvshows', name: 'tvshows', component: TVshowComponent,props: true },
+   
 
     ]
 });
