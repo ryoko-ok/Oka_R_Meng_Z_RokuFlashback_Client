@@ -6,14 +6,12 @@ export default {
     template: `
     <div class="container">
     <component :is="this.activeComponent"></component>
-        <div >
+       
+        <div class="movie-card" >
             
-
-
-        <div class="">
                 <video id="video" ref="myMedia" autoplay controls :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             
-            </div>
+          
 
             <div class="media-detail-info">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
