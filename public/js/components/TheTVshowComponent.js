@@ -44,7 +44,7 @@ export default {
 
     data() {
         return {
-            message:"What elses we have:",
+            // message:"What elses we have:",
             currentMediaDetails: {},
 
             retrievedMedia: [],

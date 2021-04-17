@@ -10,7 +10,6 @@ export default {
             <div class=" " @click="seetvshow">
                 <i class="fas fa-tv"></i>
             </div>
-
             
             <div class=" " @click="seemusic">
             <i class="fas fa-music"></i>
@@ -19,9 +18,7 @@ export default {
        
         <div class="movie-card" >
             
-                <video id="video" ref="myMedia" autoplay controls :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
-            
-          
+                <video id="video" ref="myMedia" autoplay controls :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>          
 
             <div class="media-detail-info">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
@@ -32,20 +29,17 @@ export default {
             </div>
            
         </div>
-
                 <h4>{{message}}</h4>
                 <div class="clearfix">
                     <img v-for="media in retrievedMedia" :src="'images/video/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
-     
     </div>
     `,
-
 
     data() {
         return {
             // push first (or random) media object here (selected / filtered on create)
-            message:"What elses we have:",
+            // message:"What elses we have:",
             currentMediaDetails: {},
             retrievedMedia: [],
 
