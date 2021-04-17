@@ -34,8 +34,26 @@ nav:not(.side-nav) ul li{display:inline-block;font-size:1.75em;padding:0 0.2em;c
 //     margin-top:53px}
 
 .container {
+    padding: 50px 0 30px 0;
+    width: 80%;
+    text-align: center;
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+    }
+}
+
+.mediaCon {
+    text-align: center;
+    width: 100%;
     background-color: black;
     padding: 50px 0 30px 0;
+    margin: 0 auto;
+    display: block;
 }
 
 .display-4{font-size:2.25rem}
@@ -148,6 +166,21 @@ footer ul li{
     .media-thumb{height:160px;margin:0.7em}
 
     .container {
+        width: 60%;
+        padding: 100px 0 40px 0;
+
+        h1 {
+            padding-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+        }
+    }
+
+    .mediaCon {
+        width: 70%;
         padding: 70px 0 40px 0;
     }
 

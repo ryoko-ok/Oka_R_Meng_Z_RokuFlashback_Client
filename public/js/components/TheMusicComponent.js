@@ -6,7 +6,7 @@ export default {
     props: ['currentuser'],
 
     template: `
-    <div class="container">
+    <div class="mediaCon">
     <component :is="this.activeComponent"></component>
     <div class="media-switch">
             <div class="tv" @click="seetvshow">
