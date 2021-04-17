@@ -26,3 +26,14 @@
         color: green;
     }
 }
+
+.media-switch{
+    display: flex;
+    flex-direction: row;
+    .fa-tv, .fa-film, .fa-music{
+        color:white;
+        font-size: 50px;
+        cursor: pointer;
+        padding: 5%;
+    }
+}

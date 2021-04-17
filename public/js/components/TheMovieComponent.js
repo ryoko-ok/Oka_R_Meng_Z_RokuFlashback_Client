@@ -6,6 +6,16 @@ export default {
     template: `
     <div class="container">
     <component :is="this.activeComponent"></component>
+    <div class="media-switch">
+            <div class=" " @click="seetvshow">
+                <i class="fas fa-tv"></i>
+            </div>
+
+            
+            <div class=" " @click="seemusic">
+            <i class="fas fa-music"></i>
+            </div>
+         </div>
        
         <div class="movie-card" >
             
@@ -72,9 +82,14 @@ export default {
                .catch((err) =>console.error(err));
         },
 
-        switchCurrentMedia(media){
-            this.currentMediaDetails = media;
+        seetvshow(){
+            this.$router.push({ name: "tvshows"});
         },
+    
+    
+        seemusic(){
+            this.$router.push({ name: "musics"});
+        }
 
   
     }

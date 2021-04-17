@@ -1,14 +1,11 @@
-# Project Name
+# Roku
+If you miss old movies, don't miss this site. Roku is a website devoted to old movies from the '50s to' 90s. We also offer movies for children, and we tailor the content to the user's age. Roku is also a safe and reliable home theater.
 
-Roku Flashback Application _ Client
 
-## Installation
-
-Using database via server file and show media details on the page
 
 ## Documents
-[Design](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
-[Develop](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
+* [Design](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
+* [Develop](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
 
 ## Usage
 1. Use own user account and enter

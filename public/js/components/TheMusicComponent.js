@@ -8,6 +8,17 @@ export default {
     template: `
     <div class="container">
     <component :is="this.activeComponent"></component>
+    <div class="media-switch">
+            <div class=" " @click="seetvshow">
+                <i class="fas fa-tv"></i>
+            </div>
+
+            <div class=" " @click="seemovie">
+            <i class="fas fa-film" ></i>
+            </div>
+
+         </div>
+    
 
             <div class="music_card">
              <img :src="'images/music/' + currentMediaDetails.musics_cover" alt="media thumb"  class="rotate">
@@ -18,7 +29,7 @@ export default {
                 <h4 class="media-title">{{currentMediaDetails.musics_title}}</h4>
                 <span class="media-singer">Released in {{currentMediaDetails.musics_singer}}</span>
                 <span class="media-year">Released in {{currentMediaDetails.musics_year}}</span>
-                <span class="media-genre">Genre : {{currentMediaDetails.musics_genre}}</span>
+                <span class="media-genre">For {{currentMediaDetails.musics_category}}</span>
 
             </div>
              <h4>{{message}}</h4>
@@ -60,8 +71,13 @@ export default {
                .catch((err) =>console.error(err));
         },
 
-        switchCurrentMedia(media){
-            this.currentMediaDetails = media;
+        seetvshow(){
+            this.$router.push({ name: "tvshows"});
+        },
+    
+        seemovie() {
+            this.$router.push({ name: "movies"});
+            
         }
 
     }
