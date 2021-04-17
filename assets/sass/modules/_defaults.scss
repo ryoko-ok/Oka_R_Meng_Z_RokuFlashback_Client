@@ -2,19 +2,66 @@
 html{position:relative;min-height:100%}
 body{font:14px "Lucida Grande", Helvetica, Arial, sans-serif;color:white;margin-bottom:100px;background:url(../images/gunmetal.jpg) repeat}
 a{color:#00B7FF;text-decoration:none}
-header{background-color:#1a1818;padding:12px 14px;position:fixed;z-index:500;width:100%}
+
+header{
+    padding:12px 14px;position:fixed;
+    z-index:500;width:100%;
+    background: linear-gradient(-45deg, #c0b2cc, #8865a7, #6C3C97, #531f81);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 header span{margin-left:15px;font-weight:bolder;font-size:1.5em;text-transform:uppercase;position:relative;top:5px}
 nav:not(.side-nav) ul{right:3em;list-style-type:none;margin-bottom:0}
 nav:not(.side-nav) ul li{display:inline-block;font-size:1.75em;padding:0 0.2em;cursor:pointer}
 .toast{position:absolute;right:1em;top:4.25rem;z-index:200;color:#333;min-width:175px}
 .toast .toast-body span{margin-left:0.8rem;position:relative;top:-2px;font-weight:bolder}
 .fa-exclamation-triangle{color:red;font-size:1.5em}
-.container>div:first-of-type{margin-top:53px}
+
+// .container>div:first-of-type{
+//     margin-top:53px}
+
+.container {
+    padding-top: 100px;
+}
+
 .display-4{font-size:2.25rem}
 .user-message{text-align:center;font-size:2rem}
 .user-message{margin:0.25em 0 1em}
-.card{cursor:pointer;color:white;background:#6C3C97;border:4px solid #522d73;margin-bottom:1em}
-.card .card-body p{margin:10px 0 0}
+
+.card{
+    cursor:pointer;
+    color:white;
+    background:#6C3C97;
+    border:4px solid #522d73;
+    margin-bottom:1em}
+.card .card-body p{
+    margin:10px 0 0
+}
+
+.avatar-icon {
+    img {
+        border: #6C3C97 5px solid;
+        margin: 10px;
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 50%;
+        }
+    }
+}
 
 .media-detail-info{
     text-align: center;
@@ -37,7 +84,52 @@ nav:not(.side-nav) ul li{display:inline-block;font-size:1.75em;padding:0 0.2em;c
 .media-thumb{height:140px;margin:0.7em}
 
 
-footer{position:absolute;bottom:0;width:100%;height:100px;background-color:#1a1818}
-footer p{display:inline-block;padding-left:1em;position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}footer ul{list-style-type:none;position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);margin-bottom:0;max-width:95px}
-footer ul li{font-size:2.5em;display:inline-block;margin-right:0.4em;color:rgba(255,255,255,0.3)}
-.roku-jumbotron{color:#333;margin:70px 30px 0 !important}
+footer{
+    position:absolute;
+    bottom:0;width:100%;
+    height:60px;
+    background: linear-gradient(-45deg, #c0b2cc, #8865a7, #6C3C97, #531f81);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+footer p{
+    display:inline-block;
+    padding-left:1em;
+    position:relative;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%)
+}
+footer ul{
+    list-style-type:none;
+    position:relative;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%);
+    margin-bottom:0;
+}
+footer ul li{
+    font-size:2.5em;
+    display:inline-block;
+    margin-right:0.4em;
+    color:rgba(255,255,255,0.3)
+}
+.roku-jumbotron{
+    color:#333;
+    margin:70px 30px 0 !important
+}

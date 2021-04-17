@@ -10,16 +10,17 @@ export default {
         <section class="all_media">
         <h2 >Please select the media type you like</h2>
           <div class="media-button">
+            
             <div class=" " @click="seetvshow">
-                <i class="fas fa-tv"></i>
+                <i class="fas fa-tv fa-fw"></i>
             </div>
 
             <div class=" " @click="seemovie">
-            <i class="fas fa-film" ></i>
+            <i class="fas fa-film fa-fw" ></i>
             </div>
             
             <div class=" " @click="seemusic">
-            <i class="fas fa-music"></i>
+            <i class="fas fa-music fa-fw"></i>
             </div>
          </div>
         </section>

@@ -1,39 +1,63 @@
 .all_media{
     text-align: center;
-    width: 40%;
+    width: 70%;
     margin: 15% auto;
 
 .media-button{  
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     margin: 0 auto;
+    text-align: center;
 }
     
     .fa-tv, .fa-film, .fa-music{
+        text-align: center;
         color:white;
-        font-size: 180px;
+        font-size: 150px;
         cursor: pointer;
-        padding: 20%;
+        padding: 10%;
+        border-radius: 100%;
+        margin: auto;
     }
     .fa-tv:hover{
-        color: purple;
+        background-color: #f25287;
     }
      .fa-film:hover{
-        color: royalblue;
+        background-color: #01c5c4;
     }
      .fa-music:hover{
-        color: green;
+        background-color: #ffe268;
     }
 }
 
 .media-switch{
     display: flex;
     flex-direction: row;
+    padding: 10px;
     .fa-tv, .fa-film, .fa-music{
         color:white;
         font-size: 50px;
         cursor: pointer;
         padding: 5%;
+    }
+}
+
+@media (min-width:600px) {
+    .all_media{
+        width: 50%;
+        margin: 15% auto;
+    
+        .media-button{  
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            }
+        .fa-tv, .fa-film, .fa-music{
+            font-size: 180px;
+            padding: 20%;
+        }
     }
 }
