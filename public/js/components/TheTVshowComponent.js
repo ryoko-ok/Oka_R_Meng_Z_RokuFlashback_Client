@@ -6,6 +6,17 @@ export default {
     template: `
     <div class="container">
     <component :is="this.activeComponent"></component>
+
+        <div class="media-switch">
+            <div class=" " @click="seemovie">
+            <i class="fas fa-film" ></i>
+            </div>
+            
+            <div class=" " @click="seemusic">
+            <i class="fas fa-music"></i>
+            </div>
+         </div>
+
         <div >
                 <video ref="myMedia" autoplay controls  :src="'video/' + currentMediaDetails.tvs_trailer" class="fs-video"></video>
                 
@@ -16,7 +27,7 @@ export default {
                 <p class="media-details" v-html="currentMediaDetails.tvs_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.tvs_runtime}}</span>
                 <span class="media-year">Released in {{currentMediaDetails.tvs_year}}</span>
-                <span class="media-genre">Genre : {{currentMediaDetails.tvs_genre}}</span>
+                <span class="media-genre">For {{currentMediaDetails.tvs_category}}</span>
 
             </div>
 
@@ -63,8 +74,14 @@ export default {
                .catch((err) =>console.error(err));
         },
 
-        switchCurrentMedia(media){
-            this.currentMediaDetails = media;
+     
+    
+        seemovie() {
+            this.$router.push({ name: "movies"});
+            
+        },
+        seemusic(){
+            this.$router.push({ name: "musics"});
         }
 
     }
