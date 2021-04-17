@@ -34,7 +34,8 @@ nav:not(.side-nav) ul li{display:inline-block;font-size:1.75em;padding:0 0.2em;c
 //     margin-top:53px}
 
 .container {
-    padding-top: 100px;
+    background-color: black;
+    padding: 50px 0 30px 0;
 }
 
 .display-4{font-size:2.25rem}
@@ -66,8 +67,17 @@ nav:not(.side-nav) ul li{display:inline-block;font-size:1.75em;padding:0 0.2em;c
 .media-detail-info{
     text-align: center;
     margin: 2%;
-}
+    padding: 10px 20px;
 
+    h4 {
+        padding-bottom: 10px;
+    }
+
+    p, span {
+        font-weight: lighter;
+
+    }
+}
 
 .media-type{list-style-type:none;margin-bottom:0}
 .media-type li{padding:1rem;cursor:pointer;display:inline-block;width:33%;text-align:center}
@@ -132,4 +142,26 @@ footer ul li{
 .roku-jumbotron{
     color:#333;
     margin:70px 30px 0 !important
+}
+
+@media (min-width:600px) {
+    .media-thumb{height:160px;margin:0.7em}
+
+    .container {
+        padding: 70px 0 40px 0;
+    }
+
+    .media-detail-info{
+        padding: 30px 80px;
+
+        h4 {
+            font-size: 2.1rem;
+            padding-bottom: 20px;
+        }
+
+        p, span {
+            font-size: 1.2rem;
+        }
+    }
+
 }

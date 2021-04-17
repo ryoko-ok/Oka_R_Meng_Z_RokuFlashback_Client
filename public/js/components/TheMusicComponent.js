@@ -9,12 +9,14 @@ export default {
     <div class="container">
     <component :is="this.activeComponent"></component>
     <div class="media-switch">
-            <div class=" " @click="seetvshow">
+            <div class="tv" @click="seetvshow">
                 <i class="fas fa-tv"></i>
+                <discrive>TV</discrive>
             </div>
 
-            <div class=" " @click="seemovie">
+            <div class="film" @click="seemovie">
             <i class="fas fa-film" ></i>
+            <discrive>MOVIE</discrive>
             </div>
 
          </div>

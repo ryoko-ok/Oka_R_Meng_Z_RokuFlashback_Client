@@ -7,12 +7,15 @@ export default {
     <div class="container">
     <component :is="this.activeComponent"></component>
     <div class="media-switch">
-            <div class=" " @click="seetvshow">
+            <div class="tv" @click="seetvshow">
                 <i class="fas fa-tv"></i>
+                <discrive>TV</discrive>
             </div>
             
-            <div class=" " @click="seemusic">
-            <i class="fas fa-music"></i>
+            <div class="music" @click="seemusic">
+                <i class="fas fa-music"></i>
+                <discrive>MUSIC</discrive>
+
             </div>
          </div>
        
