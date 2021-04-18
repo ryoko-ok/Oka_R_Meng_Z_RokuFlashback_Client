@@ -6,8 +6,9 @@ Please download Audios/Videos and move to public folder
 * [public](https://drive.google.com/file/d/1te6G6auZC1XELVVamx7pol6laFUw4zTv/view?usp=sharing)
 
 ## Documents
-* [Design](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
-* [Dev Note](https://docs.google.com/document/d/10Bz2IzbCvffBQP2r66kThUmGHhMiIAsLptPjntCXzmg/edit?usp=sharing)
+* [Design](https://drive.google.com/file/d/1ksuG-9n2AWCoIl3ori_Z_kx0CdNLZghx/view?usp=sharing)
+* [Dev Note](https://drive.google.com/file/d/16j_6NMnxexFEeb_K8JOB9jDWWEptx2BB/view?usp=sharing)
+* [SQL](https://drive.google.com/file/d/1HKwRSka_rccGcpyZlHPVeCcq5A-CmIMT/view?usp=sharing)
 
 ## Usage
 1. Use own user account and enter
