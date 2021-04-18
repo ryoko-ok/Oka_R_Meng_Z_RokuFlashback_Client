@@ -6,36 +6,37 @@ export default {
     props: ['currentuser'],
 
     template: `
-    <div class="container">
-    <component :is="this.activeComponent"></component>
-    <div class="media-switch">
-            <div class=" " @click="seetvshow">
+    <div class="mediaCon">
+        <component :is="this.activeComponent"></component>
+        <div class="media-switch">
+            <div class="tv" @click="seetvshow">
                 <i class="fas fa-tv"></i>
+                <discrive>TV</discrive>
             </div>
 
-            <div class=" " @click="seemovie">
-            <i class="fas fa-film" ></i>
+            <div class="film" @click="seemovie">
+                <i class="fas fa-film" ></i>
+                <discrive>MOVIE</discrive>
             </div>
 
          </div>
     
-
-            <div class="music_card">
+        <div class="music_card">
              <img :src="'images/music/' + currentMediaDetails.musics_cover" alt="media thumb"  class="rotate">
              <audio ref="myMedia" autoplay controls :src="'audio/' + currentMediaDetails.musics_audio" class="fs-audio"></audio >
-            </div>
+        </div>
         
-            <div class="media-detail-info">
-                <h4 class="media-title">{{currentMediaDetails.musics_title}}</h4>
-                <span class="media-singer">Released in {{currentMediaDetails.musics_singer}}</span>
-                <span class="media-year">Released in {{currentMediaDetails.musics_year}}</span>
-                <span class="media-genre">For {{currentMediaDetails.musics_category}}</span>
+        <div class="media-detail-info">
+            <h4 class="media-title">{{currentMediaDetails.musics_title}}</h4>
+            <span class="media-singer">Released in {{currentMediaDetails.musics_singer}}</span>
+            <span class="media-year">Released in {{currentMediaDetails.musics_year}}</span>
+            <span class="media-genre">For {{currentMediaDetails.musics_category}}</span>
+        </div>
 
-            </div>
-             <h4>{{message}}</h4>
-                <div class="clearfix">
-                    <img v-for="media in retrievedMedia" :src="'images/music/' + media.musics_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
-                </div>
+        <h4>{{message}}</h4>
+        <div class="clearfix">
+            <img v-for="media in retrievedMedia" :src="'images/music/' + media.musics_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
+        </div>
         
     </div>
     `,

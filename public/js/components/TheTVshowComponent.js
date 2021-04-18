@@ -4,16 +4,20 @@ export default {
     props: ['currentuser'],
 
     template: `
-    <div class="container">
+    <div class="mediaCon">
     <component :is="this.activeComponent"></component>
 
         <div class="media-switch">
-            <div class=" " @click="seemovie">
+            <div class="film" @click="seemovie">
             <i class="fas fa-film" ></i>
+            <discrive>MOVIE</discrive>
+
             </div>
             
-            <div class=" " @click="seemusic">
+            <div class="music" @click="seemusic">
             <i class="fas fa-music"></i>
+            <discrive>MUSIC</discrive>
+
             </div>
          </div>
 

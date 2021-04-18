@@ -9,25 +9,31 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    justify-content: center;
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+    }
 }
     
-    .fa-tv, .fa-film, .fa-music{
+    .tv, .film, .music{
         text-align: center;
-        color:white;
-        font-size: 150px;
+        color: white;
+        font-size: 80px;
         cursor: pointer;
-        padding: 10%;
-        border-radius: 100%;
+        padding: 10% 8% 0 8%;
         margin: auto;
     }
-    .fa-tv:hover{
-        background-color: #f25287;
+    .tv:hover{
+        color: #f25287;
     }
-     .fa-film:hover{
-        background-color: #01c5c4;
+     .film:hover{
+        color: #01c5c4;
     }
-     .fa-music:hover{
-        background-color: #ffe268;
+     .music:hover{
+        color: #ffe268;
     }
 }
 
@@ -35,11 +41,34 @@
     display: flex;
     flex-direction: row;
     padding: 10px;
-    .fa-tv, .fa-film, .fa-music{
+    background-color: black;
+    margin-bottom: 5px;
+    // font-weight: bold;
+
+    .tv, .film, .music{
         color:white;
-        font-size: 50px;
+        font-size: 20px;
         cursor: pointer;
-        padding: 5%;
+        padding: 10px;
+        margin: 0 10px;
+        opacity: 50%;
+
+        discrive {
+            font-size: 15px;
+        }
+    }
+
+    .tv:hover{
+        opacity: 100%;
+        color: #f25287;
+    }
+     .film:hover{
+        opacity: 100%;
+        color: #01c5c4;
+    }
+     .music:hover{
+        opacity: 100%;
+        color: #ffe268;
     }
 }
 
@@ -54,10 +83,32 @@
             width: 100%;
             margin: 0 auto;
             text-align: center;
+
+            p {
+                font-size: 30px;
             }
-        .fa-tv, .fa-film, .fa-music{
-            font-size: 180px;
-            padding: 20%;
+            }
+
+        // .tv, .film, .music{
+        //     font-size: 180px;
+        //     padding: 15% 15% 5% 15%;
+        //     margin: 10px;
+        // }
+    }
+
+    .media-switch {
+        margin-bottom: 30px;
+
+        .tv, .film, .music{
+            color:white;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0 20px;
+    
+            discrive {
+                font-size: 25px;
+            }
         }
     }
 }
