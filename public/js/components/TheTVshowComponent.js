@@ -7,7 +7,14 @@ export default {
     <div class="mediaCon">
     <component :is="this.activeComponent"></component>
 
+
         <div class="media-switch">
+
+        <div class="music" @click="allmedia">
+            <i class="fas fa-home"></i>
+                <discrive>HOME</discrive>
+            </div>
+
             <div class="film" @click="seemovie">
             <i class="fas fa-film" ></i>
             <discrive>MOVIE</discrive>
@@ -79,6 +86,9 @@ export default {
         },
 
      
+        switchCurrentMedia(media){
+            this.currentMediaDetails = media;
+        },
     
         seemovie() {
             this.$router.push({ name: "movies"});
@@ -86,6 +96,10 @@ export default {
         },
         seemusic(){
             this.$router.push({ name: "musics"});
+        },
+
+        allmedia(){
+            this.$router.push({ name: "media"});
         }
 
     }
