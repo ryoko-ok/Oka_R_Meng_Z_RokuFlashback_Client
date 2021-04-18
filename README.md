@@ -5,7 +5,7 @@ If you miss old movies, don't miss this site. Roku is a website devoted to old m
 
 ## Documents
 * [Design](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
-* [Develop](https://docs.google.com/document/d/1RWPXizD14y1B96HBsfQrkJM9EXluUjSgxPPgz4rqafM/edit?usp=sharing)
+* [Dev Note](https://docs.google.com/document/d/10Bz2IzbCvffBQP2r66kThUmGHhMiIAsLptPjntCXzmg/edit?usp=sharing)
 
 ## Usage
 1. Use own user account and enter

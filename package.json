@@ -7,7 +7,7 @@
     "start": "node app",
     "start-dev": "nodemon app"
   },
-  "author": "Ryoko",
+
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",

@@ -7,6 +7,12 @@ export default {
     <div class="mediaCon">
         <component :is="this.activeComponent"></component>
         <div class="media-switch">
+
+        <div class="music" @click="allmedia">
+            <i class="fas fa-home"></i>
+                <discrive>HOME</discrive>
+            </div>
+            
             <div class="tv" @click="seetvshow">
                 <i class="fas fa-tv"></i>
                 <discrive>TV</discrive>
@@ -15,8 +21,11 @@ export default {
             <div class="music" @click="seemusic">
                 <i class="fas fa-music"></i>
                 <discrive>MUSIC</discrive>
-
             </div>
+
+            
+
+
          </div>
        
         <div class="movie-card" >
@@ -77,12 +86,21 @@ export default {
                .catch((err) =>console.error(err));
         },
 
+        switchCurrentMedia(media){
+            this.currentMediaDetails = media;
+        },
+    
+
         seetvshow(){
             this.$router.push({ name: "tvshows"});
         },
     
         seemusic(){
             this.$router.push({ name: "musics"});
+        },
+        
+        allmedia(){
+            this.$router.push({ name: "media"});
         }
 
   
