@@ -109,7 +109,16 @@ nav:not(.side-nav) ul li{display:inline-block;font-size:1.75em;padding:0 0.2em;c
 .media-genres li:last-of-type::after{content:none}
 .media-info{padding-left:0;padding-right:0}
 .media-info>div{padding:0 10px}
-.media-thumb{height:140px;margin:0.7em}
+
+.media-thumb{
+    height:140px;
+    margin:0.7em;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 50%;
+    }
+}
 
 
 footer{

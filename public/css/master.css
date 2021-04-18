@@ -216,6 +216,10 @@ nav:not(.side-nav) ul li {
 .media-thumb {
   height: 140px;
   margin: 0.7em;
+  cursor: pointer;
+}
+.media-thumb:hover {
+  opacity: 50%;
 }
 
 footer {
